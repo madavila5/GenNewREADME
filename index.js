@@ -1,5 +1,6 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 // TODO: Create an array of questions for user input
 const questions = [
@@ -9,6 +10,19 @@ const questions = [
         message: 'Enter Your GitHub Username',
         validate: usernameInput => {
             if (usernameInput) {
+                return true;
+            } else {
+                console.log('Please Enter Your GitHub Username');
+                return false
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter Link to GitHub Profile',
+        validate: githubInput => {
+            if (githubInput) {
                 return true;
             } else {
                 console.log('Please Enter Your GitHub Username');
