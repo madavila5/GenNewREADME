@@ -55,18 +55,39 @@ const questions = [
                 return false
             }
         }
-    }       
+    },
+    {     
         type: 'input',
-        name: 'username',
-        message: 'Enter Your GitHub Username',
-        validate: usernameInput => {
-            if (usernameInput) {
+        name: 'description',
+        message: 'Enter a Project Description',
+        validate: descripInput => {
+            if (descripInput) {
                 return true;
             } else {
-                console.log('Please Enter Your GitHub Username');
+                console.log('Please Enter Project Description');
                 return false
             }
         }
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'Enter Installation Instructions',
+        default: 'npm i'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Enter Your Instructions and Examples',
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            } else {
+                console.log('Please Enter Your Instructions and Examples');
+                return false
+            }
+        }
+    }
 ];
 
 // TODO: Create a function to write README file
