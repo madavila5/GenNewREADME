@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require("./utils/generateMarkdown.js")
 var readmeData = {}
 // TODO: Create an array of questions for user input
 const questions = [
@@ -87,12 +88,38 @@ const questions = [
                 return false
             }
         }
+    },
+    {
+        type: 'input',
+        name: 'contribute',
+        message: 'Enter Contributions to Application',
+        validate: contributionInput => {
+            if (contributionInput) {
+                return true;
+            } else {
+                console.log('Please Enter Contributions to Application');
+                return false
+            }
+        }
+    },
+    {
+        type: 'checkbox',
+        name: 'license',
+        message: 'Select License',
+        choices: ["MIT", "Apache2.0", "BSD3", "GPL3.0"],
+        when: ({licenceConfirm}) => {
+            if (licenceConfirm) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    return FileSystem.writeToFile(fileName, data, err => {
+    return fs.writeToFile(fileName, data, err => {
         if (err) throw err;
         console.log('README created');
     })
