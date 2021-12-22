@@ -7,7 +7,14 @@ const questions = [
         type: 'input',
         name: 'username',
         message: 'Enter Your GitHub Username',
-        validate: usernameInput
+        validate: usernameInput => {
+            if (usernameInput) {
+                return true;
+            } else {
+                console.log('Please Enter Your GitHub Username');
+                return false
+            }
+        }
     }
 ];
 
