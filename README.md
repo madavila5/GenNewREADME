@@ -14,7 +14,7 @@ Professional README Generator Project
 
 # Installation Instructions
 
-- 
+- Install npm module inquirer in order for it to run.
 
 # Skills Used
 
@@ -23,8 +23,43 @@ Professional README Generator Project
 
 # Images
 
-<img src="Images/Reademe1" alt="">
+<img src="utils/README.gif" alt="Readme Generator walk through">
 
+- https://watch.screencastify.com/v/evSX3WWJY5DWaZJXVan0
 
 # Link
 Not Deployed, for terminal use
+https://github.com/madavila5/GenNewREAMME
+
+
+
+
+  # Test README
+  
+  # Description
+  This should create a test README
+
+  # Table of Contents
+  * [Installation] (#installation)
+  * [Usage](#usage)
+  * [Contributing](#contributing)
+  * [License](#license)
+  * [Tests](#tests)
+  * [Questions](#questions)
+  
+  ## Installation
+  To get started, run the following command: 
+  ```
+  npm i
+  ```
+
+  ## Usage
+  Should Install
+
+  ## Contributing
+  contribution
+  
+  
+
+  ## Questions
+  Please reach out to [madavila5](github.com/madavila5) or madavila@ucdavis.edu for any questions.
